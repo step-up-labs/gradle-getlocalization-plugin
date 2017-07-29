@@ -80,7 +80,7 @@ def getPomConfiguration() {
         name 'Gradle GetLocalization Plugin'
         packaging 'jar'
         description 'A Gradle plugin for managing translations through GetLocalization.'
-        url 'https://github.com/johnuopini/gradle-getlocalization-plugin'
+        url 'https://github.com/step-up-labs/gradle-getlocalization-plugin'
         licenses {
             license {
                 name 'The MIT License'
@@ -90,15 +90,15 @@ def getPomConfiguration() {
         }
         developers {
             developer {
-                id 'johnuopini'
-                name 'Richard Blaney'
-                email 'johnuopini@gmail.com'
+                id 'step-up-labs'
+                name 'Step Up Labs'
+                email 'david@stepuplabs.io'
             }
         }
         scm {
-            connection 'scm:https://johnuopini@github.com/johnuopini/gradle-getlocalization-plugin'
-            developerConnection 'scm:git@github.com:johnuopini/gradle-getlocalization-plugin.git'
-            url 'https://github.com/johnuopini/gradle-getlocalization-plugin'
+            connection 'scm:https://step-up-labs@github.com/step-up-labs/gradle-getlocalization-plugin'
+            developerConnection 'scm:git@github.com:step-up-labs/gradle-getlocalization-plugin.git'
+            url 'https://github.com/step-up-labs/gradle-getlocalization-plugin'
         }
     }
 }

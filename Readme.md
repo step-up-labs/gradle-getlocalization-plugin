@@ -6,10 +6,10 @@ Just add the plugin to the build dependencies and provide getlocalization accoun
 ```gradle
 buildscript {
     repositories {
-        mavenCentral()
+        jcenter()
     }
     dependencies {
-        classpath 'org.zooper.gradle:gradle-getlocalization-plugin:1.+'
+        classpath 'io.stepuplabs.getlocalization.gradle:gradle-getlocalization-plugin:1.2.1'
     }
 }
 
@@ -26,6 +26,16 @@ Then you can just type "gradle downloadTranslations" or add it as a dependency t
 ```gradle
 release.dependsOn downloadTranslations
 ```
+
+## Step Up Labs fork
+Supports plurals, comments and doesn't crash when downloading. Based on [oprisnik's fork](https://github.com/oprisnik/gradle-getlocalization-plugin).
+
+### How to release new version
+- change version in build.gradle
+- run `gradlew install`
+- test it locally using mavenLocal() dependency
+- create new version in [Bintray](https://bintray.com/stepuplabs/gradle-getlocalization-plugin)
+- upload files via UI
 
 ## IANA Codes
 Android does not use the same IANA code format that Get Localization uses and sometimes you might want to map a translation to more than one language. Basic mapping provided by the plugin is the following:
