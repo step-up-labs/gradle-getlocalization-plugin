@@ -13,7 +13,8 @@ apply plugin: 'maven'
 apply plugin: 'signing'
 apply plugin: 'release'
 
-group = "org.zooper.gradle"
+group = "io.stepuplabs.getlocalization.gradle"
+version = "1.2.1"
 
 ext.archivesBaseName = 'gradle-getlocalization-plugin'
 ext.isSnapshot = version.endsWith("-SNAPSHOT")
@@ -66,11 +67,6 @@ uploadArchives {
             beforeDeployment { signPom(it) }
         }
         name = 'mavenCentralReleaseDeployer'
-        repository(url: 'https://oss.sonatype.org/service/local/staging/deploy/maven2/') {
-            authentication(userName: sonatypeUsername, password: sonatypePassword)
-            releases(updatePolicy: 'always')
-            snapshots(updatePolicy: 'always')
-        }
         pom.project(pomConfiguration)
     }
 }

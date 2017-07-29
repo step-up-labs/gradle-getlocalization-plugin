@@ -76,25 +76,6 @@ class GetLocalizationDownloadTask extends DefaultTask {
         tmpFile.delete()
     }
 
-        // For each code check target dir and copy file over
-        codes.each { code ->
-            def File targetDir = new File(resDir, String.format("values-%s", code.trim()))
-            if (!targetDir.exists()) targetDir.mkdir()
-            if (!targetDir.exists() || !targetDir.isDirectory()) {
-                throw new IOException(
-                        "Target translation directory cannot be created"
-                )
-            }
-
-            // Copy (JAVA 7 or newer only)
-            File targetFile = new File(targetDir, t.filename.replaceAll(".*/", ""))
-            Files.copy(tmpFile.toPath(), targetFile.toPath(), StandardCopyOption.REPLACE_EXISTING)
-        }
-
-        // All done
-        tmpFile.delete()
-    }
-
     def List getTranslations() {
         def result = []
         def url = String.format(URL_LIST, project.getlocalization.project)
