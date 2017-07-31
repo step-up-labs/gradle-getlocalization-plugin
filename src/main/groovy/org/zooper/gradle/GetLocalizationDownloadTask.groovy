@@ -51,10 +51,10 @@ class GetLocalizationDownloadTask extends DefaultTask {
         tmpFile.withWriter("UTF-8") { out ->
             String line
             while ((line = br.readLine()) != null) {
-                out.println line
+                out.println line.replace("...", "…")
             }
-            out.print String.format("<!-- Translation '%s'->%s, progress %s%%, master '%s' -->\n",
-                    t.iana_code, codes, t.progress, t.master_file)
+            out.print String.format("<!-- Translation '%s', progress %s%%, master '%s' -->\n",
+                    t.iana_code, t.progress, t.master_file)
         }
 
         // For each code check target dir and copy file over

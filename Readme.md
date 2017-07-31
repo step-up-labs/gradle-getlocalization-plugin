@@ -9,7 +9,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'io.stepuplabs.getlocalization.gradle:gradle-getlocalization-plugin:1.2.1'
+        classpath 'io.stepuplabs.getlocalization.gradle:gradle-getlocalization-plugin:1.2.2'
     }
 }
 
@@ -28,7 +28,12 @@ release.dependsOn downloadTranslations
 ```
 
 ## Step Up Labs fork
-Supports plurals, comments and doesn't crash when downloading. Based on [oprisnik's fork](https://github.com/oprisnik/gradle-getlocalization-plugin).
+Based on [oprisnik's fork](https://github.com/oprisnik/gradle-getlocalization-plugin).
+
+- supports plurals
+- keeps comments
+- doesn't crash when downloading
+- replaces "..." with "…"
 
 ### How to release new version
 - change version in build.gradle
