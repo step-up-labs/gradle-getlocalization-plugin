@@ -23,6 +23,14 @@ class GetLocalizationPluginExtension {
     "zh-TW" : "zh-rTW",
     "zh-CN" : "zh-rCN",
   ]
+  def fastlane_codes = [
+          "de": "de-DE",
+          "es": "es-ES",
+          "fi": "fi-FI",
+          "it": "it-IT",
+          "ru": "ru-RU"
+  ]
+  def fastlane = false
 
   public GetLocalizationPluginExtension(Project project) {
   }

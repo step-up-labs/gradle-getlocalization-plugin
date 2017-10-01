@@ -34,6 +34,7 @@ Based on [oprisnik's fork](https://github.com/oprisnik/gradle-getlocalization-pl
 - keeps comments
 - doesn't crash when downloading
 - replaces "..." with "…"
+- support fastlane supply Play Store descriptions
 
 ### How to release new version
 - change version in build.gradle
@@ -84,3 +85,8 @@ getlocalization {
     project = "projectname"
     master = "mystrings.xml" 
 ```
+
+## Fastlane Supply
+Make sure you have files `full_description.txt`, `short_description.txt` and `title.txt` in GL.
+
+Then enable downloading with `fastlane = true` in Gradle. The files should go to correct folders and then you can upload it to Play Store with `fastlane supply`.
